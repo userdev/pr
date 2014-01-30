@@ -131,3 +131,8 @@ footer {
 .form-error {
     margin-bottom: 5px;
 }
+.login-img{
+    float:right;
+    position:absolute;
+    left:30%;
+}

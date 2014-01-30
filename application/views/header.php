@@ -16,6 +16,8 @@
         <!-- Add custom CSS here -->
         <link href="<?php echo base_url('css/modern-business.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('css/datepicker.css'); ?>" rel="stylesheet">
+
     </head>
 
     <body>
@@ -90,5 +92,5 @@
             <!-- /.container -->
         </nav>
 
-  <div class="container">      
+        <div class="container">      
 

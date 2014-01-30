@@ -1,32 +1,11 @@
 <?php
 
-class User_model extends CI_Model {
+class User_model extends MY_model {
 
     function __construct() {
         parent::__construct();
     }
 
-    public function check_username($username) {
-        $query = $this->db->select('user_id')->from('users')
-                ->where('nick', $username);
-        $results = $query->get()->result();
-        //Ja nav šāda lietotājvārda atgriž FALSE
-        if (count($results) == 0)
-            return FALSE;
-        else
-            return TRUE; //Ja jau nav šāds lietotājvārds
-    }
-
-    public function check_email($email) {
-        $query = $this->db->select('user_id')->from('users')
-                ->where('email', $email);
-        $results = $query->get()->result();
-        //Ja nav šāda lietotājvārda atgriž FALSE
-        if (count($results) == 0)
-            return FALSE;
-        else
-            return TRUE; //Ja jau nav šāds lietotājvārds
-    }
 
     function save_user($username, $password, $email) {
         $data = array(
@@ -56,7 +35,7 @@ class User_model extends CI_Model {
             //Sessijas datu sagatavošana
             $newdata = array(
                 'username' => $username,
-                'user_id' => $results[0]->user_ID,
+                'user_id' => $results[0]->user_id,
                 'logged_in' => TRUE
             );
             //Sessijas izveidošana

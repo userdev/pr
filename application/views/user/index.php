@@ -11,6 +11,7 @@ if (!isset($user->username_log))
         <h1 class="page-header">Registrējies
             <small>It's Nice to Meet You!</small>
         </h1>
+        <div class="login-img"><img src="<?php echo base_url('img/login-large.jpg'); ?>" alt="Smiley face" height="82%" width="82%"></div>
         <div class="col-sm-8">
             <form role="form" method="POST" action="saveuser">
                 <div class="row">
@@ -45,10 +46,10 @@ if (!isset($user->username_log))
         </div>
     </div>
     <div class="col-lg-12">
-        <h3 class="page-header">Ielogojies
-        </h3>
+        <h4 class="">Ienāc</h4>
         <div class="col-sm-8">
             <form role="form" method="POST" action="takelogin">
+                
                 <div class="row">
                     <div class="form-group col-lg-4">
                         <div class="form-error">                            
@@ -66,7 +67,7 @@ if (!isset($user->username_log))
                     <div class="clearfix"></div>
                     <div class="form-group col-lg-4">
                         <div class="form-error">
-<?php echo form_error('password_log', '<span class="form-error label label-danger">', '</span>'); ?> 
+                            <?php echo form_error('password_log', '<span class="form-error label label-danger">', '</span>'); ?> 
                         </div>
                         <input type="password" name="password_log" class="form-control" id="input2" placeholder="Parole">
                     </div>

@@ -48,7 +48,7 @@ class User extends CI_Controller {
             $this->user_model->save_user($username, $this->input->post('password'), $email);
             //Login and session
             $this->user_model->login($username, $this->input->post('password'));
-            redirect('/my_profile');
+            redirect('/profile');
         }
     }
 
