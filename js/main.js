@@ -1,8 +1,8 @@
 ///datapicker
 $(function() {
     window.prettyPrint && prettyPrint();
-    $('#birthDate').datepicker({
-        format: 'mm-dd-yyyy'
+    $('#birth').datepicker({
+        format: 'yyyy-mm-dd'
     });
 });
 //datapicker ends
